@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.local/bin:$PATH"
 
 # opencode
-export PATH=/home/malabdullah/.opencode/bin:$PATH
+export PATH=$HOME/.opencode/bin:$PATH
 
 # Oh My Posh
 eval "$(oh-my-posh init zsh --config $HOME/my.json)"

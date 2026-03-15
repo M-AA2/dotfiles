@@ -119,3 +119,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 
 export EDITOR=nvim
+
+cd ~

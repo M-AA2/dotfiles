@@ -6,6 +6,7 @@ gtk-titlebar = false
 background-opacity = 0.9
 background-opacity-cells = true
 background-blur = true
+gtk-single-instance = false
 
 # options that they want to change from the default.
 #

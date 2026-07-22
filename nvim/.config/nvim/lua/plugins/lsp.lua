@@ -50,7 +50,25 @@ return {
           })
         end
       end
-      
+
+      -- gopls with Go-specific settings
+      if configs.gopls then
+        lspconfig.gopls.setup({
+          capabilities = capabilities,
+          settings = {
+            gopls = {
+              gofumpt = true,
+              staticcheck = true,
+              analyses = {
+                unusedparams = true,
+                unusedvariable = true,
+              },
+              semanticTokens = true,
+            },
+          },
+        })
+      end
+
       -- Keymaps
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to Definition' })
       vim.keymap.set('n', 'gr', vim.lsp.buf.references, { desc = 'Go to References' })
